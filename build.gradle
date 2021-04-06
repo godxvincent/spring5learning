@@ -16,6 +16,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	/*Tiene varias funcionalidades pero una que reinicia la aplicación si detecta cambios en algun archivo
+	del classpath*/
+//	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
 test {

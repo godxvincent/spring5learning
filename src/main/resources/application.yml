@@ -1,0 +1,8 @@
+spring:
+  devtools:
+    restart:
+      enabled: true
+
+
+  main:
+    log-startup-info: false

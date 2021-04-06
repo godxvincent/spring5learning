@@ -1,8 +1,10 @@
 package com.godxvincent.spring5learning.services;
 
+import com.godxvincent.spring5learning.models.Withdraw;
+
 public interface AccountService {
 
-    public Double getBalance(Double withdraw);
+    public Double getBalance(Withdraw withdraw);
 
 
 }

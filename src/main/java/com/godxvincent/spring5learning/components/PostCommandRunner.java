@@ -9,6 +9,7 @@ public class PostCommandRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Esta ejecutandose una clase que ejecuta comandos una vez, justo luego de iniciar el .run de la aplicación");
+        // Este if es solo para evitar el warning al hacer el push.
         if (args.length>0) {
             if (args[0].equals("")) {
                 throw new Exception("");

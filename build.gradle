@@ -24,3 +24,11 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+// Si le quiero pasar argumentos del proyecto me toca definirle que valide que tenga la propiedad.
+// https://stackoverflow.com/questions/52267489/how-do-i-use-gradle-bootrun-with-args-in-intellij
+bootRun {
+	if (project.hasProperty('args')) {
+		args project.args.split(',')
+	}
+}

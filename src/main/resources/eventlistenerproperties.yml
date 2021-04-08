@@ -1,0 +1,12 @@
+sprint-events:
+  springEventsEnabled: false
+  application-context-initialized-listener-enabled: true
+  application-environment-prepared-listener-enabled: false
+  application-failed-listener-enabled: false
+  application-prepared-listener-enabled: false
+  application-ready-listener-enabled: false
+  application-started-listener-enabled: false
+  application-starting-listener-enabled: false
+  availability-change-listener-enabled: false
+  context-refreshed-listener-enabled: false
+  web-server-initialized-listener-enabled: false

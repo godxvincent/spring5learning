@@ -1,0 +1,19 @@
+# Configuraciones para producción.
+spring:
+  devtools:
+    restart:
+      enabled: true
+  config:
+#    Se importa otro archivo de configuraciones
+    import: eventlistenerproperties.yml
+
+  main:
+    log-startup-info: false
+
+
+app:
+  enabled: true
+  remote-address: 192.168.1.10
+  security:
+    user: "godxvincent"
+    password: "nilocreas"

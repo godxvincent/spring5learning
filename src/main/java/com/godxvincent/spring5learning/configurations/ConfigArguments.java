@@ -15,12 +15,5 @@ public class ConfigArguments {
         this.args = args;
         System.out.println("Estos son las opciones con las que se ejecuto la aplicación");
         System.out.println(args.getNonOptionArgs());
-//        for (String argument: args.) {
-//            System.out.println(argument);
-//        }
-
-
-
-
     }
 }

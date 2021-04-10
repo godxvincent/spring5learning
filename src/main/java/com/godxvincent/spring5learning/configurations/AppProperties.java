@@ -1,17 +1,13 @@
 package com.godxvincent.spring5learning.configurations;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.validation.annotation.Validated;
+import org.springframework.context.annotation.Primary;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
-//Esta etiqueta le dice a sprint que será un bean que debe enlazar las propiedades desde un archivo de configuración.
-@ConfigurationProperties("app")
-@Validated
 public class AppProperties {
 
     private boolean enabled;

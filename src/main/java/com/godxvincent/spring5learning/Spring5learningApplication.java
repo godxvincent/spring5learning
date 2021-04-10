@@ -5,10 +5,13 @@ import com.godxvincent.spring5learning.configurations.EventListenerProperties;
 import com.godxvincent.spring5learning.listeners.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
-@EnableConfigurationProperties({AppProperties.class, EventListenerProperties.class})
+// https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config-enabling
+//@EnableConfigurationProperties({AppProperties.class, EventListenerProperties.class})
+@ConfigurationPropertiesScan
 public class Spring5learningApplication {
 
 	public static void main(String[] args) {

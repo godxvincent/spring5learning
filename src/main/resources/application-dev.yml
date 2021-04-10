@@ -1,4 +1,4 @@
-# Configuraciones por default y aqui se define que archivo y bean debe cargar.
+# Configuraciones para desarrollo
 spring:
   devtools:
     restart:
@@ -8,12 +8,10 @@ spring:
     import: eventlistenerproperties.yml
   main:
     log-startup-info: true
-#  profiles:
-#    active: "dev"
 
 app:
   enabled: false
-  remote-address: 121.0.0.1
+  remote-address: 127.0.0.1
   security:
     user: "dev-user"
     password: "dev-password"

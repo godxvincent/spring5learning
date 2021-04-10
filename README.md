@@ -17,3 +17,4 @@ These additional references should also help you:
 * *gradle bootRun*
 Nota: A menos que se tenga el plugin basico de java instalado se debe correr este comando de lo contrario se debe ejecutar el comando *gradle run*.
 * Spring tiene unos eventos durante la fase de inicialización por lo general no se requiere su modificación pero es bueno saber que allí se encuentran. [Eventos](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-application-events-and-listeners)  
+* Al manejar profiles con las clases de configuraciones se debe tener archivos de configuración por aparte siguiendo la nomenclatura de `application-{profile}.yml` 

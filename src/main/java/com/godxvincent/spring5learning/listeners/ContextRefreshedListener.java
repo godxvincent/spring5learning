@@ -1,5 +1,7 @@
 package com.godxvincent.spring5learning.listeners;
 
+import com.godxvincent.spring5learning.configurations.EventListenerProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 
@@ -8,9 +10,18 @@ import org.springframework.context.event.ContextRefreshedEvent;
 // un tipo generico del tipo de evento que espera se implemente.
 public class ContextRefreshedListener implements ApplicationListener<ContextRefreshedEvent> {
 
+    @Autowired
+    private EventListenerProperties eventListenerProperties;
+
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        System.out.println("Se esta activando el evento ContextRefreshedEvent");
-        System.out.println(event.getApplicationContext().getApplicationName());
+
+        if (eventListenerProperties != null && eventListenerProperties.isContextRefreshedListenerEnabled()) {
+            System.out.println("Se esta activando el evento ContextRefreshedEvent");
+        } else {
+            if (eventListenerProperties == null) {
+                System.out.println("En el ContextRefreshedListener aun no se cargan las propiedades EventListenerProperties");
+            }
+        }
     }
 }

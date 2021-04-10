@@ -13,11 +13,15 @@ public class PostCommandRunner implements CommandLineRunner {
     @Autowired
     private AppProperties appProperties;
 
+    @Autowired
+    private EventListenerProperties eventListenerProperties;
+
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Esta ejecutandose una clase que ejecuta comandos una vez, justo luego de iniciar el .run de la aplicación");
         System.out.println("Esto es una prueba===> "+appProperties.isEnabled());
         System.out.println("Esto es una prueba===> "+appProperties.getRemoteAddress().toString());
+        System.out.println("Esto es una prueba 2===> "+eventListenerProperties.isApplicationContextInitializedListenerEnabled());
 
 
         // Este if es solo para evitar el warning al hacer el push.

@@ -13,8 +13,12 @@ public class ApplicationContextInitializedListener implements ApplicationListene
     @Override
     public void onApplicationEvent(ApplicationContextInitializedEvent event) {
 
-        System.out.println("Se esta activando el evento ApplicationContextInitializedEvent");
-        System.out.println(event.getSpringApplication().toString());
-
+        if (eventListenerProperties != null && eventListenerProperties.isApplicationContextInitializedListenerEnabled()) {
+            System.out.println("Se esta activando el evento ApplicationContextInitializedEvent");
+        } else {
+            if (eventListenerProperties == null) {
+                System.out.println("En el ApplicationContextInitializedListener aun no se cargan las propiedades EventListenerProperties");
+            }
+        }
     }
 }

@@ -27,7 +27,6 @@ public class Spring5learningApplication {
 				new ApplicationStartedListener(),
 				new AvailabilityChangeListener(),
 				new ApplicationReadyListener(),
-				new AvailabilityChangeListener(),
 				new ApplicationFailedListener()
 		);
 		app.run(args);

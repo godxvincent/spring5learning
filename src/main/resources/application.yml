@@ -8,6 +8,17 @@ spring:
     import: eventlistenerproperties.yml
   main:
     log-startup-info: true
+  output:
+    ansi:
+      enabled: always
+#debug: true
+#trace: true
+# Configurar archivos de salida de los logs
+logging:
+  file:
+    name: "./logs/mylogs.log"
+#    path: "./logs/"
+
 #  profiles:
 #    active: "dev"
 
